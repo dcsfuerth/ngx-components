@@ -1,0 +1,65 @@
+{
+  "name": "@dcs/ngx-lib-starter",
+  "version": "1.0.0",
+  "description": "Starting point for creating a npm package, including angular build support.",
+  "main": "bundles/ngx-lib-starter.umd.js",
+  "module": "@dcs/ngx-lib-starter/ngx-lib-starter.es5.js",
+  "es2015": "@dcs/ngx-lib-starter/ngx-lib-starter.js",
+  "typings": "index.d.ts",
+  "scripts": {
+    "clean:build": "rimraf build",
+    "build:copy": "cpy 'src/**/*.*' 'index.ts' 'build/tmp' --parents",
+    "build:package-json": "ngx-build-package-json -s package.json -d build/package.json",
+    "build:inline": "ngx-inline-styles --cssGlob 'build/tmp/src/**/*.scss' --componentsGlob 'build/tmp/src/**/*.component.ts' --postcssConfig config/postcss.config.js",
+    "build:aot:es2015": "ngc -p tsconfig.es2015.json",
+    "build:aot:es5": "ngc -p tsconfig.es5.json",
+    "build:aot": "run-s build:aot:es2015 build:aot:es5",
+    "build:rollup": "rollup -c config/rollup.build.config.js",
+    "build:cleanup": "rimraf 'build/tmp' 'build/src/**/*.html' 'build/src/**/*.scss' 'build/src/**/*.js' 'build/src/**/*.js.map' 'build/*.js' 'build/*.js.map'",
+    "build": "run-s clean:build build:copy build:package-json build:inline build:aot build:rollup build:cleanup",
+    "build:watch": "ngx-build-watch -c config/rollup.dev.config.js -t src --cache"
+  },
+  "keywords": [
+    "npm",
+    "rollup",
+    "angular",
+    "typescript"
+  ],
+  "author": "Marc Remolt <marc.remolt@dcs-fuerth.de>",
+  "license": "ISC",
+  "devDependencies": {
+    "@angular/common": "^4.2.3",
+    "@angular/compiler": "^4.2.3",
+    "@angular/compiler-cli": "^4.2.3",
+    "@angular/core": "^4.2.3",
+    "@dcs/ngx-build-tools": "^1.2.6",
+    "@types/uuid": "^3.0.0",
+    "autoprefixer": "^7.1.1",
+    "cpy-cli": "^1.0.1",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.0.2",
+    "postcss": "^6.0.2",
+    "resolve": "^1.3.3",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.43.0",
+    "rollup-plugin-angular": "^0.4.4",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-typescript2": "^0.4.3",
+    "rollup-plugin-uglify": "^2.0.1",
+    "rxjs": "^5.4.1",
+    "ts-node": "^3.0.6",
+    "tslib": "^1.7.1",
+    "typescript": "^2.3.4",
+    "uglify-es": "^3.0.18",
+    "zone.js": "^0.8.12"
+  },
+  "peerDependencies": {
+    "@angular/core": "^4.2.3",
+    "@angular/common": "^4.2.3",
+    "rxjs": "^5.4.1"
+  },
+  "dependencies": {
+    "uuid": "^3.1.0"
+  }
+}

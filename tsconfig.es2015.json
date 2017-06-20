@@ -1,0 +1,21 @@
+{
+  "extends": "./config/tsconfig.base.json",
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "es2015",
+    "outDir": "build",
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  },
+  "files": [
+    "build/tmp/index.ts"
+  ],
+  "angularCompilerOptions": {
+    "strictMetadataEmit": true,
+    "skipTemplateCodegen": true,
+    "flatModuleOutFile": "ngx-lib-starter.js",
+    "flatModuleId": "@dcs/ngx-lib-starter",
+    "annotateForClosureCompiler": true
+  }
+}
