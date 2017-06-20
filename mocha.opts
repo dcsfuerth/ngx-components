@@ -1,0 +1,7 @@
+--compilers ts:ts-node/register,tsx:ts-node/register
+--require reflect-metadata
+--check-leaks
+--colors
+--slow 75
+--ui bdd
+src/**/*.spec.ts

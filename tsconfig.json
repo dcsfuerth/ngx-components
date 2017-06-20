@@ -2,8 +2,11 @@
   "extends": "./config/tsconfig.base.json",
   "compilerOptions": {
     "target": "es5",
-    "module": "es2015",
-    "outDir": "build"
+    "module": "commonjs",
+    "outDir": "build",
+    "typeRoots": [
+      "node_modules/@types"
+    ]
   },
   "include": [
     "src/**/*.ts",

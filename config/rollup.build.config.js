@@ -10,7 +10,6 @@ const plugins = [resolve(), commonjs(), uglify({}, minify)];
 
 const baseConfig = {
   entry: 'build/index.js',
-  treeshake: true,
   sourceMap: true,
   plugins: plugins,
   external: external
