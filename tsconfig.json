@@ -3,10 +3,7 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "outDir": "build",
-    "typeRoots": [
-      "node_modules/@types"
-    ]
+    "outDir": "build"
   },
   "include": [
     "src/**/*.ts",

@@ -2,11 +2,20 @@ const resolve = require('rollup-plugin-node-resolve');
 const commonjs = require('rollup-plugin-commonjs');
 const uglify = require('rollup-plugin-uglify');
 const minify = require('uglify-es').minify;
+const Visualizer = require('rollup-plugin-visualizer');
+const replaceTsDefaultImports = require('@dcs/ngx-build-tools')
+  .replaceTypescriptDefaultImportsPlugin;
+const path = require('path');
 
 const pkg = require('../package.json');
-const external = Object.keys(pkg.peerDependencies || {});
+const external = [...Object.keys(pkg.peerDependencies || {}), 'os'];
 
-const plugins = [resolve(), commonjs(), uglify({}, minify)];
+const plugins = [
+  replaceTsDefaultImports(),
+  resolve(),
+  commonjs(),
+  uglify({}, minify)
+];
 
 const baseConfig = {
   entry: 'build/index.js',
@@ -16,11 +25,12 @@ const baseConfig = {
 };
 
 module.exports = [
-  // es2015
+  // main
   Object.assign({}, baseConfig, {
-    entry: 'build/index.js',
-    dest: 'build/@dcs/ngx-lib-starter/ngx-lib-starter.js',
-    format: 'es'
+    entry: 'build/tmp/es5/index.js',
+    dest: 'build/bundles/ngx-lib-starter.umd.js',
+    moduleName: 'ngx-lib-starter',
+    format: 'umd'
   }),
   // module
   Object.assign({}, baseConfig, {
@@ -28,11 +38,16 @@ module.exports = [
     dest: 'build/@dcs/ngx-lib-starter/ngx-lib-starter.es5.js',
     format: 'es'
   }),
-  // main
+  // es2015
   Object.assign({}, baseConfig, {
-    entry: 'build/tmp/es5/index.js',
-    dest: 'build/bundles/ngx-lib-starter.umd.js',
-    moduleName: 'ngx-lib-starter',
-    format: 'umd'
+    entry: 'build/index.js',
+    dest: 'build/@dcs/ngx-lib-starter/ngx-lib-starter.js',
+    format: 'es',
+    plugins: [
+      ...plugins,
+      Visualizer({
+        filename: './report/build-statistics.html'
+      })
+    ]
   })
 ];

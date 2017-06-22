@@ -10,14 +10,19 @@
     "removeComments": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "allowSyntheticDefaultImports": false,
+    "allowSyntheticDefaultImports": true,
     "strict": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ],
     "lib": [
       "dom",
       "es2015"
+    ],
+    "types": [
+      "node",
+      "mocha",
+      "chai"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
     ]
   }
 }

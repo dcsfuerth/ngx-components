@@ -2,15 +2,18 @@ const angular = require('rollup-plugin-angular');
 const tsPlugin = require('rollup-plugin-typescript2');
 const resolve = require('rollup-plugin-node-resolve');
 const commonjs = require('rollup-plugin-commonjs');
+const replaceTsDefaultImports = require('@dcs/ngx-build-tools')
+  .replaceTypescriptDefaultImportsPlugin;
 
 const sass = require('node-sass');
 const postcss = require('postcss');
 
 const postcssConfig = require('./postcss.config');
 const pkg = require('../package.json');
-const external = Object.keys(pkg.peerDependencies || {});
+const external = [...Object.keys(pkg.peerDependencies || {}), 'os'];
 
 const plugins = [
+  replaceTsDefaultImports(),
   resolve(),
   commonjs(),
   angular({

@@ -12,7 +12,6 @@
     "strictMetadataEmit": true,
     "skipTemplateCodegen": true,
     "flatModuleOutFile": "ngx-lib-starter.js",
-    "flatModuleId": "@dcs/ngx-lib-starter",
-    "annotateForClosureCompiler": true
+    "flatModuleId": "@dcs/ngx-lib-starter"
   }
 }

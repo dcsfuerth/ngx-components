@@ -1,9 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as uuidv4_ from 'uuid/v4';
-import { v4 } from '@types/uuid/interfaces';
-
-// thanks rollup, see https://github.com/rollup/rollup/issues/1267
-const uuidv4: v4 = (<any>uuidv4_).default || uuidv4_;
+import * as loremIpsum from 'lorem-ipsum';
 
 @Component({
   selector: 'dcs-foo',
@@ -12,11 +8,10 @@ const uuidv4: v4 = (<any>uuidv4_).default || uuidv4_;
 })
 export class FooComponent implements OnInit {
   private bar: number = 37;
-  public uuid: string;
+  public content: string;
 
   ngOnInit() {
-    this.uuid = uuidv4();
-    console.log('onInit');
+    this.content = loremIpsum();
   }
 
   get sense(): number {

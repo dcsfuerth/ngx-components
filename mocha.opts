@@ -1,6 +1,5 @@
 --compilers ts:ts-node/register,tsx:ts-node/register
---require reflect-metadata
---check-leaks
+--require ./config/mocha
 --colors
 --slow 75
 --ui bdd
