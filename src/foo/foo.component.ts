@@ -4,13 +4,13 @@ import * as loremIpsum from 'lorem-ipsum';
 @Component({
   selector: 'dcs-foo',
   styleUrls: ['./foo.component.css'],
-  templateUrl: './foo.component.html'
+  templateUrl: './foo.component.html',
 })
 export class FooComponent implements OnInit {
-  private bar: number = 37;
   public content: string;
+  private bar: number = 37;
 
-  ngOnInit() {
+  public ngOnInit() {
     this.content = loremIpsum();
   }
 

@@ -15,8 +15,8 @@ function setupComponentForTesting(componentKlass: any, templateName: string) {
   TestBed.overrideComponent(componentKlass, {
     set: {
       styleUrls: [],
-      templateUrl: undefined,
-      template: fs.readFileSync(__dirname + '/' + templateName).toString()
+      template: fs.readFileSync(__dirname + '/' + templateName).toString(),
+      templateUrl: undefined
     }
   });
 }

@@ -21,13 +21,13 @@ const plugins = [
       style: scss => {
         const css = sass.renderSync({ data: scss }).css;
         return postcss(postcssConfig).process(css).css;
-      }
-    }
+      },
+    },
   }),
   tsPlugin({
     typescript: require('typescript'),
-    tsconfig: 'tsconfig.json'
-  })
+    tsconfig: 'tsconfig.json',
+  }),
 ];
 
 module.exports = {
@@ -36,5 +36,5 @@ module.exports = {
   format: 'es',
   sourceMap: true,
   plugins: plugins,
-  external: external
+  external: external,
 };

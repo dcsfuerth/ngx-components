@@ -1,0 +1,17 @@
+// Platzieren Sie Ihre Einstellungen in dieser Datei, um Standard- und Benutzereinstellungen zu überschreiben.
+{
+  "autoimport.filesToScan": "src/**/*.{ts,tsx}",
+  "codemetrics.basics.DecorationModeEnabled": false,
+  "codemetrics.basics.MetricsForClassDeclarationsToggled": false,
+  "codemetrics.nodeconfiguration.AnyKeyword": 0,
+  "files.autoSave": "onFocusChange",
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "search.exclude": {
+    "**/node_modules": true,
+    "build": true,
+    "docs": true
+  },
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.implementationsCodeLens.enabled": true
+}
