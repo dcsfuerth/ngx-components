@@ -1,3 +1,18 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/dcsfuerth/ngx-lib-starter/compare/v1.0.3...v1.1.0) (2017-06-23)
+
+
+### Bug Fixes
+
+* **foo:** fixing specs ([2c31fb1](https://github.com/dcsfuerth/ngx-lib-starter/commit/2c31fb1))
+
+
+### Features
+
+* **webpack:** Added a demo webpack based app ([adb62ab](https://github.com/dcsfuerth/ngx-lib-starter/commit/adb62ab))
+
+
+
 <a name="1.0.3"></a>
 ## [1.0.3](https://github.com/dcsfuerth/ngx-lib-starter/compare/v1.0.2...v1.0.3) (2017-06-23)
 

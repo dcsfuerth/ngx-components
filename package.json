@@ -1,6 +1,6 @@
 {
   "name": "@dcs/ngx-lib-starter",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Starting point for creating a npm package, including angular build support.",
   "main": "bundles/ngx-lib-starter.umd.js",
   "module": "@dcs/ngx-lib-starter/ngx-lib-starter.es5.js",
