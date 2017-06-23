@@ -1,5 +1,5 @@
 [![npm](https://img.shields.io/npm/v/@dcs/ngx-lib-starter.svg)](https://www.npmjs.com/package/@dcs/ngx-lib-starter)
-[![Build Status](https://travis-ci.org/dcsfuerth/ngx-build-tools.svg?branch=master)](https://travis-ci.org/dcsfuerth/ngx-build-tools)
+[![Build Status](https://travis-ci.org/dcsfuerth/ngx-lib-starter.svg?branch=master)](https://travis-ci.org/dcsfuerth/ngx-lib-starter)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 # @dcs/ngx-lib-starter

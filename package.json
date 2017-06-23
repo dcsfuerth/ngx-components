@@ -28,9 +28,9 @@
     "lint": "tslint --project tsconfig.json --type-check",
     "docs": "typedoc --out docs --excludeExternals --ignoreCompilerErrors --includeDeclarations --target ES6 --exclude '**/*.spec.ts' --mode file ./src",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "commit": "git-cz",
+    "commit": "git cz",
     "commitmsg": "validate-commit-msg",
-    "precommit": "run-s lint test",
+    "precommit": "run-s lint",
     "prepush": "npm run build",
     "version": "run-s build changelog && git add CHANGELOG.md",
     "postversion": "git push --no-verify && git push --no-verify --tags"
