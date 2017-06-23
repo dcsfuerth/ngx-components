@@ -6,7 +6,7 @@ import {
   ComponentFixture,
   TestBed,
   getTestBed,
-  ComponentFixtureAutoDetect
+  ComponentFixtureAutoDetect,
 } from '@angular/core/testing';
 
 import { FooComponent } from './foo.component';
@@ -16,8 +16,8 @@ function setupComponentForTesting(componentKlass: any, templateName: string) {
     set: {
       styleUrls: [],
       template: fs.readFileSync(__dirname + '/' + templateName).toString(),
-      templateUrl: undefined
-    }
+      templateUrl: undefined,
+    },
   });
 }
 
@@ -51,7 +51,7 @@ describe('FooComponent', () => {
       TestBed.configureTestingModule({
         declarations: [FooComponent],
         providers: [{ provide: ComponentFixtureAutoDetect, useValue: true }],
-        schemas: [NO_ERRORS_SCHEMA]
+        schemas: [NO_ERRORS_SCHEMA],
       });
 
       TestBed.compileComponents();
@@ -70,8 +70,14 @@ describe('FooComponent', () => {
     });
 
     it('renders the template with content', () => {
-      expect(domElement.innerHTML).to.equal(
-        `<div>${subject.content} ${subject.sense}</div>\n`
+      expect(domElement.innerHTML).to.include(
+        `<span class="content">${subject.content}</span>`
+      );
+    });
+
+    it('renders the template with sense property', () => {
+      expect(domElement.innerHTML).to.include(
+        `<span class="sense">${subject.sense}</span>`
       );
     });
   });
