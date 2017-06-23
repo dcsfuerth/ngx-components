@@ -1,5 +1,15 @@
+<a name="1.0.3"></a>
+## [1.0.3](https://github.com/dcsfuerth/ngx-lib-starter/compare/v1.0.2...v1.0.3) (2017-06-23)
+
+
+### Features
+
+* **build:** Added travis config and basic README ([e6c6bc8](https://github.com/dcsfuerth/ngx-lib-starter/commit/e6c6bc8))
+
+
+
 <a name="1.0.2"></a>
-## 1.0.2 (2017-06-23)
+## [1.0.2](https://github.com/dcsfuerth/ngx-lib-starter/compare/479b205...v1.0.2) (2017-06-23)
 
 
 ### Bug Fixes
