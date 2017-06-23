@@ -1,6 +1,6 @@
 {
   "name": "@dcs/ngx-lib-starter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Starting point for creating a npm package, including angular build support.",
   "main": "bundles/ngx-lib-starter.umd.js",
   "module": "@dcs/ngx-lib-starter/ngx-lib-starter.es5.js",
@@ -27,6 +27,7 @@
     "test:coverage": "run-s test:coverage:run test:coverage:check",
     "lint": "tslint --project tsconfig.json --type-check",
     "docs": "typedoc --out docs --excludeExternals --ignoreCompilerErrors --includeDeclarations --target ES6 --exclude '**/*.spec.ts' --mode file ./src",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "commit": "git-cz",
     "commitmsg": "validate-commit-msg",
     "precommit": "run-s lint test",
