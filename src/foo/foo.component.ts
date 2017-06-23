@@ -3,7 +3,7 @@ import * as loremIpsum from 'lorem-ipsum';
 
 @Component({
   selector: 'dcs-foo',
-  styleUrls: ['./foo.component.css'],
+  styleUrls: ['./foo.component.scss'],
   templateUrl: './foo.component.html',
 })
 export class FooComponent implements OnInit {

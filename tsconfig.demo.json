@@ -2,8 +2,9 @@
   "extends": "./config/tsconfig.base.json",
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
-    "outDir": "build"
+    "module": "es2015",
+    "outDir": "build",
+    "declaration": false
   },
   "include": [
     "demo/**/*.ts",
