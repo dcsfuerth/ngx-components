@@ -10,7 +10,10 @@
   "search.exclude": {
     "**/node_modules": true,
     "build": true,
-    "docs": true
+    "docs": true,
+    "report": true,
+    ".vscode": true,
+    ".nyc_output": true
   },
   "typescript.referencesCodeLens.enabled": true,
   "typescript.implementationsCodeLens.enabled": true

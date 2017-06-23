@@ -26,7 +26,13 @@
     "test:coverage:check": "nyc check-coverage --statements 95 --branches 95 --functions 95 --lines 95",
     "test:coverage": "run-s test:coverage:run test:coverage:check",
     "lint": "tslint --project tsconfig.json --type-check",
-    "docs": "typedoc --out docs --excludeExternals --ignoreCompilerErrors --includeDeclarations --target ES6 --exclude '**/*.spec.ts' --mode file ./src"
+    "docs": "typedoc --out docs --excludeExternals --ignoreCompilerErrors --includeDeclarations --target ES6 --exclude '**/*.spec.ts' --mode file ./src",
+    "commit": "git-cz",
+    "commitmsg": "validate-commit-msg",
+    "precommit": "run-s lint test",
+    "prepush": "npm run build",
+    "version": "run-s build changelog && git add CHANGELOG.md",
+    "postversion": "git push --no-verify && git push --no-verify --tags"
   },
   "keywords": [
     "npm",
@@ -51,10 +57,14 @@
     "@types/node": "^8.0.1",
     "autoprefixer": "^7.1.1",
     "chai": "^4.0.2",
+    "commitizen": "^2.9.6",
+    "conventional-changelog-cli": "^1.3.1",
     "core-js": "^2.4.1",
     "cpy-cli": "^1.0.1",
     "cross-env": "^5.0.1",
     "crypto": "0.0.3",
+    "cz-conventional-changelog": "^2.0.0",
+    "husky": "^0.14.0",
     "jsdom": "^11.0.0",
     "mocha": "^3.4.2",
     "node-sass": "^4.5.3",
@@ -76,6 +86,7 @@
     "typedoc": "^0.7.1",
     "typescript": "2.3.4",
     "uglify-es": "^3.0.19",
+    "validate-commit-msg": "^2.12.2",
     "zone.js": "^0.8.12"
   },
   "peerDependencies": {
