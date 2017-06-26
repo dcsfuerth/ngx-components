@@ -27,6 +27,7 @@ describe('FooComponent', () => {
 
     beforeEach(() => {
       subject = new FooComponent();
+      subject.bar = 15;
     });
 
     describe('ngOnInit', () => {
@@ -36,6 +37,12 @@ describe('FooComponent', () => {
 
       it('sets content property', () => {
         expect(subject.content).to.be.not.empty;
+      });
+    });
+
+    describe('sense', () => {
+      it('adds 5 to the bar attribute', () => {
+        expect(subject.sense).to.equal(20);
       });
     });
   });

@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
+  encapsulation: ViewEncapsulation.None,
   selector: 'dcs-app',
+  styleUrls: ['./app.component.scss'],
   templateUrl: './app.component.html',
 })
 export class AppComponent {

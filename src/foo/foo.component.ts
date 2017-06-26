@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import * as loremIpsum from 'lorem-ipsum';
 
 @Component({
@@ -7,8 +7,8 @@ import * as loremIpsum from 'lorem-ipsum';
   templateUrl: './foo.component.html',
 })
 export class FooComponent implements OnInit {
+  @Input() public bar: number = 37;
   public content: string;
-  private bar: number = 37;
 
   public ngOnInit() {
     this.content = loremIpsum();
