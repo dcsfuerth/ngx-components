@@ -1,3 +1,18 @@
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/dcsfuerth/ngx-lib-starter/compare/v1.2.0...v1.3.0) (2017-06-26)
+
+
+### Bug Fixes
+
+* **foo:** Adapted tests to new implementation ([0aa1daa](https://github.com/dcsfuerth/ngx-lib-starter/commit/0aa1daa))
+
+
+### Features
+
+* **foo:** Added ! to template ;) ([462242c](https://github.com/dcsfuerth/ngx-lib-starter/commit/462242c))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/dcsfuerth/ngx-lib-starter/compare/v1.1.0...v1.2.0) (2017-06-26)
 
