@@ -84,7 +84,7 @@ describe('FooComponent', () => {
 
     it('renders the template with sense property', () => {
       expect(domElement.innerHTML).to.include(
-        `<span class="sense">${subject.sense}</span>`
+        `<span class="sense">${subject.sense}!</span>`
       );
     });
   });
