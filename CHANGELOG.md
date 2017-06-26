@@ -1,3 +1,13 @@
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/dcsfuerth/ngx-lib-starter/compare/v1.1.0...v1.2.0) (2017-06-26)
+
+
+### Features
+
+* **styles:** Added boostrap to demo app ([7a8ed13](https://github.com/dcsfuerth/ngx-lib-starter/commit/7a8ed13))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/dcsfuerth/ngx-lib-starter/compare/v1.0.3...v1.1.0) (2017-06-23)
 
