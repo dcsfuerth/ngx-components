@@ -1,6 +1,9 @@
-import * as fs from 'fs';
-import { expect } from 'chai';
-import { NO_ERRORS_SCHEMA, DebugElement } from '@angular/core';
+// import * as fs from 'fs';
+// import * as path from 'path';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+
+import { FooComponent } from '../../src/foo/foo.component';
+import { setupComponentForTesting } from '../helpers/helpers';
 
 import {
   ComponentFixture,
@@ -8,18 +11,6 @@ import {
   getTestBed,
   ComponentFixtureAutoDetect,
 } from '@angular/core/testing';
-
-import { FooComponent } from './foo.component';
-
-function setupComponentForTesting(componentKlass: any, templateName: string) {
-  TestBed.overrideComponent(componentKlass, {
-    set: {
-      styleUrls: [],
-      template: fs.readFileSync(__dirname + '/' + templateName).toString(),
-      templateUrl: undefined,
-    },
-  });
-}
 
 describe('FooComponent', () => {
   describe('testing the component as pure class', () => {
@@ -36,13 +27,13 @@ describe('FooComponent', () => {
       });
 
       it('sets content property', () => {
-        expect(subject.content).to.be.not.empty;
+        expect(subject.content).toBeTruthy();
       });
     });
 
     describe('sense', () => {
       it('adds 5 to the bar attribute', () => {
-        expect(subject.sense).to.equal(20);
+        expect(subject.sense).toEqual(20);
       });
     });
   });
@@ -53,7 +44,7 @@ describe('FooComponent', () => {
     let domElement: HTMLElement;
 
     beforeEach(() => {
-      setupComponentForTesting(FooComponent, './foo.component.html');
+      setupComponentForTesting(FooComponent, ['..', '..', 'src', 'foo', 'foo.component.html']);
 
       TestBed.configureTestingModule({
         declarations: [FooComponent],
@@ -73,19 +64,15 @@ describe('FooComponent', () => {
     });
 
     it('sets the content property', () => {
-      expect(subject.content).to.not.be.empty;
+      expect(subject.content).toBeTruthy();
     });
 
     it('renders the template with content', () => {
-      expect(domElement.innerHTML).to.include(
-        `<span class="content">${subject.content}</span>`
-      );
+      expect(domElement.innerHTML).toContain(`<span class="content">${subject.content}</span>`);
     });
 
     it('renders the template with sense property', () => {
-      expect(domElement.innerHTML).to.include(
-        `<span class="sense">${subject.sense}!</span>`
-      );
+      expect(domElement.innerHTML).toContain(`<span class="sense">${subject.sense}!</span>`);
     });
   });
 });

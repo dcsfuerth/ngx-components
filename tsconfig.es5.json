@@ -1,17 +1,17 @@
 {
-  "extends": "./config/tsconfig.base.json",
+  "extends": "./config/tsconfig.common.json",
   "compilerOptions": {
     "target": "es5",
     "module": "es2015",
-    "outDir": "build/tmp/es5"
+    "outDir": "tmp/es5"
   },
-  "files": [
-    "build/tmp/index.ts"
-  ],
+  "files": ["tmp/inlined/ngx-lib-starter.ts", "tmp/inlined/src/custom-typings.d.ts"],
+
   "angularCompilerOptions": {
     "strictMetadataEmit": true,
     "skipTemplateCodegen": true,
-    "flatModuleOutFile": "ngx-lib-starter.js",
+    "annotateForClosureCompiler": true,
+    "flatModuleOutFile": "index.js",
     "flatModuleId": "@dcs/ngx-lib-starter"
   }
 }

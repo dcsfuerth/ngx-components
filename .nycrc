@@ -1,12 +1,17 @@
 {
   "report-dir": "./report/coverage",
-  "reporter": [
-    "lcov",
-    "html",
-    "text"
-  ],
-  "exclude": [
-    "config",
-    "**/*.spec.ts"
-  ]
+  "reporter": ["lcov", "html", "text"],
+  "include": ["src"],
+  "watermarks": {
+    "lines": [80, 95],
+    "functions": [80, 95],
+    "branches": [80, 95],
+    "statements": [80, 95]
+  },
+  "lines": 95,
+  "statements": 95,
+  "functions": 95,
+  "branches": 95,
+  "all": true,
+  "cache": true
 }

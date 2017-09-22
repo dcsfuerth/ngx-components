@@ -10,19 +10,13 @@
     "removeComments": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "allowSyntheticDefaultImports": true,
+    "allowSyntheticDefaultImports": false,
+    "noUnusedLocals": true,
+    "skipLibCheck": true,
     "strict": true,
-    "lib": [
-      "dom",
-      "es2015"
-    ],
-    "types": [
-      "node",
-      "mocha",
-      "chai"
-    ],
-    "typeRoots": [
-      "node_modules/@types"
-    ]
+    "strictNullChecks": false,
+    "lib": ["dom", "es2015", "dom.iterable", "scripthost"],
+    "types": ["node", "jasmine"],
+    "typeRoots": ["node_modules/@types"]
   }
 }
