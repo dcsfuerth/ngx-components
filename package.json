@@ -1,6 +1,6 @@
 {
   "name": "@dcs/ngx-lib-starter",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Starting point for creating a npm package, including angular build support.",
   "main": "./bundles/ngx-starter.umd.js",
   "module": "./esm5/index.js",
@@ -11,11 +11,9 @@
     "clean:build": "rimraf tmp build .rpt2_cache coverage report docs",
     "build:copy:src": "cpy 'src/**/*.*' ngx-lib-starter.ts tmp/inlined --parents",
     "build:copy:readme": "cpy 'README.md' 'build'",
-    "build:copy:meta":
-      "cpy '**/*.d.ts' '*.metadata.json' '../../build' --parents --cwd='tmp/es2015'",
+    "build:copy:meta": "cpy '**/*.d.ts' '*.metadata.json' '../../build' --parents --cwd='tmp/es2015'",
     "build:package-json": "ngx-build-package-json -s package.json -d build/package.json",
-    "build:inline":
-      "ngx-inline-styles --cssGlob 'tmp/inlined/src/**/*.scss' --componentsGlob 'tmp/inlined/src/**/*.component.ts' --postcssConfig config/postcss.config.js",
+    "build:inline": "ngx-inline-styles --cssGlob 'tmp/inlined/src/**/*.scss' --componentsGlob 'tmp/inlined/src/**/*.component.ts' --postcssConfig config/postcss.config.js",
     "build:aot:es2015": "ngc -p tsconfig.es2015.json",
     "build:aot:es5": "ngc -p tsconfig.es5.json",
     "build:aot": "run-s build:aot:es2015 build:aot:es5",
@@ -23,16 +21,14 @@
     "build:rollup:es5": "rollup -c config/rollup.es5.js",
     "build:rollup": "run-s build:rollup:es2015 build:rollup:es5",
     "build:cleanup": "rimraf tmp",
-    "build:code":
-      "run-s build:copy:src build:inline build:aot build:copy:meta build:copy:readme build:package-json build:rollup build:cleanup",
+    "build:code": "run-s build:copy:src build:inline build:aot build:copy:meta build:copy:readme build:package-json build:rollup build:cleanup",
     "build": "run-s clean:build lint test:coverage test:coverage:check build:code docs",
     "test": "jasmine-ts",
     "test:watch": "chokidar 'spec/**/*.ts' 'src/**/*.ts' --initial -c 'npm run test'",
     "test:coverage": "nyc  -e .ts -x \"*.spec.ts\" jasmine-ts \"spec/**/*.spec.ts\"",
     "test:coverage:check": "nyc check-coverage",
     "lint": "tslint --project tsconfig.json --type-check",
-    "docs":
-      "typedoc --out docs --excludeExternals --ignoreCompilerErrors --includeDeclarations --target ES6 --mode file --tsconfig tsconfig.docs.json ./src",
+    "docs": "typedoc --out docs --excludeExternals --ignoreCompilerErrors --includeDeclarations --target ES6 --mode file --tsconfig tsconfig.docs.json ./src",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "commit": "git cz",
     "commitmsg": "validate-commit-msg",
@@ -41,7 +37,12 @@
     "version": "run-s build changelog && git add CHANGELOG.md",
     "postversion": "git push --no-verify && git push --no-verify --tags"
   },
-  "keywords": ["npm", "rollup", "angular", "typescript"],
+  "keywords": [
+    "npm",
+    "rollup",
+    "angular",
+    "typescript"
+  ],
   "author": "Marc Remolt <marc.remolt@dcs-fuerth.de>",
   "license": "ISC",
   "repository": "dcsfuerth/ngx-lib-starter",

@@ -1,3 +1,23 @@
+<a name="1.4.0"></a>
+# [1.4.0](https://github.com/dcsfuerth/ngx-lib-starter/compare/v1.3.0...v1.4.0) (2017-09-22)
+
+
+### Bug Fixes
+
+* **docs:** Allow the docs folder to be committed ([eda4a83](https://github.com/dcsfuerth/ngx-lib-starter/commit/eda4a83))
+
+
+### Features
+
+* **common:** Ported features back from the real libraries ([69b8811](https://github.com/dcsfuerth/ngx-lib-starter/commit/69b8811))
+
+
+### BREAKING CHANGES
+
+* **common:** mocha -> jasmine
+
+
+
 <a name="1.3.0"></a>
 # [1.3.0](https://github.com/dcsfuerth/ngx-lib-starter/compare/v1.2.0...v1.3.0) (2017-06-26)
 
