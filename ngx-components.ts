@@ -1,11 +1,11 @@
-export { FooComponent, FooModule } from './src/foo';
-export { random } from './src/random';
-
-export { DatepickerModule, DatepickerComponent } from './src/datepicker';
+export { NgxComponentsModule } from './src/ngx-components.module';
+export { DatepickerModule, DatepickerComponent } from './src/datepicker/index';
+export { FooComponent, FooModule } from './src/foo/index';
 export {
   ModalModule,
   ModalComponent,
   ModalContainerComponent,
   ModalLayoutComponent,
-} from './src/modal';
-export { PipesModule, NumeralPipe } from './src/pipes';
+} from './src/modal/index';
+export { PipesModule, NumeralPipe } from './src/pipes/index';
+export { random } from './src/random';
