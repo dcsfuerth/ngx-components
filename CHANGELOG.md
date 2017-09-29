@@ -1,3 +1,13 @@
+<a name="1.4.2"></a>
+## [1.4.2](https://github.com/dcsfuerth/ngx-components/compare/v1.4.1...v1.4.2) (2017-09-29)
+
+
+### Bug Fixes
+
+* **angular/compiler:** Oh how I hate thee, angular compiler ([424ea6b](https://github.com/dcsfuerth/ngx-components/commit/424ea6b))
+
+
+
 <a name="1.4.1"></a>
 ## [1.4.1](https://github.com/dcsfuerth/ngx-components/compare/v1.4.0...v1.4.1) (2017-09-29)
 
