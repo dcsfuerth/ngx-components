@@ -12,7 +12,7 @@ export default {
   output: {
     file: 'build/esm15/index.js',
     format: 'es',
-    name: 'ngx-lib-starter',
+    name: 'ngx-components',
     sourcemap: true,
   },
   external,

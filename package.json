@@ -1,6 +1,6 @@
 {
-  "name": "@dcs/ngx-lib-starter",
-  "version": "1.4.0",
+  "name": "@dcs/ngx-components",
+  "version": "1.0.0",
   "description": "Starting point for creating a npm package, including angular build support.",
   "main": "./bundles/ngx-starter.umd.js",
   "module": "./esm5/index.js",
@@ -9,7 +9,7 @@
   "scripts": {
     "demo": "webpack-dev-server --config webpack-demo.config.js",
     "clean:build": "rimraf tmp build .rpt2_cache coverage report docs",
-    "build:copy:src": "cpy 'src/**/*.*' ngx-lib-starter.ts tmp/inlined --parents",
+    "build:copy:src": "cpy 'src/**/*.*' ngx-components.ts tmp/inlined --parents",
     "build:copy:readme": "cpy 'README.md' 'build'",
     "build:copy:meta":
       "cpy '**/*.d.ts' '*.metadata.json' '../../build' --parents --cwd='tmp/es2015'",
@@ -44,7 +44,7 @@
   "keywords": ["npm", "rollup", "angular", "typescript"],
   "author": "Marc Remolt <marc.remolt@dcs-fuerth.de>",
   "license": "ISC",
-  "repository": "dcsfuerth/ngx-lib-starter",
+  "repository": "dcsfuerth/ngx-components",
   "devDependencies": {
     "@angular/common": "^4.4.4",
     "@angular/compiler": "^4.4.4",

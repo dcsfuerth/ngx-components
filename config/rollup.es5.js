@@ -17,7 +17,7 @@ export default {
       sourcemap: true,
     },
     {
-      file: 'build/bundles/ngx-lib-starter.umd.js',
+      file: 'build/bundles/ngx-components.umd.js',
       format: 'umd',
       name: 'ngxLibStarter',
       sourcemap: true,

@@ -5,13 +5,13 @@
     "module": "es2015",
     "outDir": "tmp/es2015"
   },
-  "files": ["tmp/inlined/ngx-lib-starter.ts", "tmp/inlined/src/custom-typings.d.ts"],
+  "files": ["tmp/inlined/ngx-components.ts", "tmp/inlined/src/custom-typings.d.ts"],
 
   "angularCompilerOptions": {
     "strictMetadataEmit": true,
     "skipTemplateCodegen": true,
     "annotateForClosureCompiler": true,
     "flatModuleOutFile": "index.js",
-    "flatModuleId": "@dcs/ngx-lib-starter"
+    "flatModuleId": "@dcs/ngx-components"
   }
 }

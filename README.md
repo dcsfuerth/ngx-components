@@ -1,8 +1,8 @@
-[![npm](https://img.shields.io/npm/v/@dcs/ngx-lib-starter.svg)](https://www.npmjs.com/package/@dcs/ngx-lib-starter)
-[![Build Status](https://travis-ci.org/dcsfuerth/ngx-lib-starter.svg?branch=master)](https://travis-ci.org/dcsfuerth/ngx-lib-starter)
+[![npm](https://img.shields.io/npm/v/@dcs/ngx-components.svg)](https://www.npmjs.com/package/@dcs/ngx-components)
+[![Build Status](https://travis-ci.org/dcsfuerth/ngx-components.svg?branch=master)](https://travis-ci.org/dcsfuerth/ngx-components)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
-# @dcs/ngx-lib-starter
+# @dcs/ngx-components
 
 Starting point to develop a npm package including angular components.
 
@@ -16,6 +16,6 @@ Starting point to develop a npm package including angular components.
 
 ## Usage
 
-Fork the Github project and rename every occurrence of ngx-lib-starter with your own package name.
+Fork the Github project and rename every occurrence of ngx-components with your own package name.
 
 TODO: Rest of setup
