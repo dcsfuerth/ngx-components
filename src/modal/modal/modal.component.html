@@ -1,0 +1,5 @@
+<dcs-modal-container #container *ngIf="visible" (onCancel)="cancel()">
+  <dcs-modal-layout [titleText]="titleText" [submitText]="submitText" [cancelText]="cancelText" (onSubmit)="submit()" (onCancel)="cancel()">
+    <ng-content></ng-content>
+  </dcs-modal-layout>
+</dcs-modal-container>

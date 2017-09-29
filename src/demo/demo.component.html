@@ -4,5 +4,73 @@
     <dcs-foo></dcs-foo>
     <dcs-foo [bar]="12"></dcs-foo>
   </div>
+</div>
 
+<div class="row">
+  <div class="col">
+    <h3>Modal Demo</h3>
+    <dcs-modal #firstModal>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    </dcs-modal>
+
+    <button type="button" (click)="firstModal.toggle()">Toggle modal</button>
+
+    <dcs-modal #secondModal titleText="Creative title" submitText="Submit" (onSubmit)="saveTheWorld()">
+      Very little content
+    </dcs-modal>
+    <button type="button" (click)="secondModal.toggle()">Toggle second modal</button>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col">
+    <h3>Datepicker Demo</h3>
+
+    <div [formGroup]="form">
+      <dcs-datepicker formControlName="myDate"></dcs-datepicker>
+      <dcs-datepicker formControlName="myDate2" [options]="{ enableTime: true, altFormat: 'j. F Y H:i' }"></dcs-datepicker>
+      <dcs-datepicker formControlName="myDate3" [options]="{ mode: 'multiple' }"></dcs-datepicker>
+      <dcs-datepicker formControlName="myDate4" [options]="{ mode: 'range' }"></dcs-datepicker>
+    </div>
+  </div>
 </div>

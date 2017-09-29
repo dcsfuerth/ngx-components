@@ -12,6 +12,7 @@
     "ordered-imports": [false],
     "quotemark": [true, "single"],
     "trailing-comma": [false],
+    "object-literal-sort-keys": false,
     "angular-whitespace": [true, "check-interpolation", "check-pipe"],
     "banana-in-box": true,
     "templates-no-negated-async": true,

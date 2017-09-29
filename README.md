@@ -4,18 +4,11 @@
 
 # @dcs/ngx-components
 
-Starting point to develop a npm package including angular components.
+Collection of reusable components, directives and pipes used at DCS Fürth.
 
-## Features
+## Features (currently)
 
-* Development & production build
-* Compiles sass & inlined angular templates, even during dev build
-* Test setup & code coverage
-* Recommended VSCode setup (extensions and ws settings) included
-* ...
+* Datepicker
+* Modal
+* Numeral Pipe
 
-## Usage
-
-Fork the Github project and rename every occurrence of ngx-components with your own package name.
-
-TODO: Rest of setup

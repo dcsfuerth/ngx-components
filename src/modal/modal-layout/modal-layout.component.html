@@ -1,0 +1,15 @@
+<div class="card">
+  <h4 class="card-header">
+    {{ titleText }}
+    <button type="button" class="close" aria-label="Close" (click)="onCancel.next()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+  </h4>
+  <div class="card-body">
+    <ng-content></ng-content>
+  </div>
+  <div class="card-footer text-muted text-right">
+    <button type="button" class="btn btn-primary" (click)="onSubmit.next()">{{ submitText }}</button>
+    <button type="button" class="btn btn-default" (click)="onCancel.next()">{{ cancelText }}</button>
+  </div>
+</div>
