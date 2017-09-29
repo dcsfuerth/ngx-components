@@ -1,13 +1,3 @@
-<a name="1.1.0"></a>
-# [1.1.0](https://github.com/dcsfuerth/ngx-components/compare/v1.4.0...v1.1.0) (2017-09-29)
-
-
-### Features
-
-* **common:** Started porting old and developing new features ([ce741e1](https://github.com/dcsfuerth/ngx-components/commit/ce741e1))
-
-
-
 <a name="1.4.0"></a>
 # [1.4.0](https://github.com/dcsfuerth/ngx-components/compare/v1.3.0...v1.4.0) (2017-09-22)
 
